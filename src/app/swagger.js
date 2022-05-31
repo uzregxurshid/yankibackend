@@ -15,7 +15,7 @@ const options = {
             url: 'https://opensource.org/licenses/MIT',
         },
     },
-    host: 'localhost:3001',
+    host: `localhost:${process.env.PORT}`,
     basePath: '/api/v1',
     tags: [
         {
@@ -30,8 +30,12 @@ const options = {
     schemes: ['https', 'http'],
     servers: [
         {
-            url: 'http://localhost:3001/api/v1',
+            url:`http://localhost:${process.env.PORT}`,
             description: 'Local',
+        },
+        {
+            url:`https://yanki.herokuapp.com`,
+            description: 'Heroku',
         },
     ],
     paths: {
