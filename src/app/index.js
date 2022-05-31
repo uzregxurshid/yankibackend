@@ -54,6 +54,6 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument))
 
 
 
-app.listen(3001, () => {
+app.listen(process.env.PORT, () => {
     console.log('Server is running on port  http://localhost:3001')
 })
