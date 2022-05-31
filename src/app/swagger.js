@@ -15,7 +15,7 @@ const options = {
             url: 'https://opensource.org/licenses/MIT',
         },
     },
-    host: `localhost:${process.env.PORT}`,
+    host: `${process.env.HOST_URL}`,
     basePath: '/api/v1',
     tags: [
         {
@@ -30,7 +30,7 @@ const options = {
     schemes: ['https', 'http'],
     servers: [
         {
-            url:`http://localhost:${process.env.PORT}`,
+            url:`${process.env.HOST_URL}`,
             description: 'Local',
         },
         {
